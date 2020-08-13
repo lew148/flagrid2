@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Flag from 'components/flags/Flag';
 import FlagSearch from 'components/flags/FlagSearch';
-import { getAllCountries } from 'helpers/apiHelper';
+import { getAllCountries } from 'apiHelper';
 import 'styling/flag.css';
 
 const mapCountriesToFlags = (countries) => countries.map(c =>
