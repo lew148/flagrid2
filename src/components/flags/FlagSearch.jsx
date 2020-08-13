@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
-import _ from 'lodash'
-import { Search } from 'semantic-ui-react'
+import React, { useState } from 'react';
+import _ from 'lodash';
+import { Search } from 'semantic-ui-react';
 
 const FlagSearch = ({ allCountries, setFilteredCountries }) => {
     const [isLoading, setIsLoading] = useState(false);
@@ -10,23 +10,21 @@ const FlagSearch = ({ allCountries, setFilteredCountries }) => {
         setIsLoading(true);
         setValue(value);
 
-        console.log(value);
-
         setTimeout(() => {
             if (value.length < 1) {
                 setIsLoading(false);
-                setFilteredCountries(undefined)
+                setFilteredCountries(undefined);
                 setValue('');
                 return;
             }
 
-            const regEx = new RegExp(value, 'i')
-            const isMatch = (country) => regEx.test(country.name) || regEx.test(country.alpha3Code)
+            const regEx = new RegExp(value, 'i');
+            const isMatch = (country) => regEx.test(country.name) || regEx.test(country.alpha3Code);
 
             setIsLoading(false);
             setFilteredCountries(_.filter(allCountries, isMatch));
         }, 300);
-    }
+    };
 
     return (
         <Search

@@ -4,13 +4,13 @@ import NavMenu from 'components/nav/NavMenu';
 import Footer from 'components/Footer';
 
 const Layout = ({ children }) => (
-  <div>
-    <NavMenu />
-    <Container>
-      {children}
-    </Container>
-    <Footer />
-  </div>
+    <div>
+        <NavMenu />
+        <Container>
+            {children}
+        </Container>
+        <Footer />
+    </div>
 );
 
 export default Layout;

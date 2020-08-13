@@ -12,7 +12,7 @@ const Flag = ({ country }) => {
 
     const handlePopoverClose = () => {
         setAnchorEl(null);
-    }
+    };
 
     const open = Boolean(anchorEl);
     const id = open ? 'simple-popover' : undefined;

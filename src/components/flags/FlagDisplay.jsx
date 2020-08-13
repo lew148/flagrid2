@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import Flag from 'components/flags/Flag';
 import FlagSearch from 'components/flags/FlagSearch';
-import { getAllCountries } from 'apiHelper';
-import 'styling/flag.css'
+import { getAllCountries } from 'helpers/apiHelper';
+import 'styling/flag.css';
 
-const mapCountriesToFlags = (countries) => countries.map(c => <Flag country={c} />);
+const mapCountriesToFlags = (countries) => countries.map(c =>
+    <Flag key={c.alpha3Code} country={c} />
+);
 
 const FlagDisplay = () => {
     const [allCountries, setAllCountries] = useState([]);
@@ -27,11 +29,11 @@ const FlagDisplay = () => {
         <div className="d-flex flex-row flex-wrap justify-content-between">
             {
                 filteredCountries !== undefined
-                ? mapCountriesToFlags(filteredCountries)
-                : mapCountriesToFlags(allCountries)
+                    ? mapCountriesToFlags(filteredCountries)
+                    : mapCountriesToFlags(allCountries)
             }
         </div>
-    </>)
+    </>);
 };
 
 export default FlagDisplay;

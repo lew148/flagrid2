@@ -13,4 +13,4 @@ const FlagIcon = ({ name, flag, handleClick }) => (
     </button>
 );
 
-export default FlagIcon
+export default FlagIcon;

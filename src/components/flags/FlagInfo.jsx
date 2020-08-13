@@ -12,13 +12,17 @@ const FlagInfo = ({ name, capital, currencies, population, isoCode, languages })
             <h6>Languages</h6>
             <ul>
                 {languages.map(l => (
-                    <li>{l.name}</li>
+                    <li key={l.name}>
+                        {l.name}
+                    </li>
                 ))}
             </ul>
             <h6>Currencies</h6>
             <ul>
                 {currencies.map(c => (
-                    <li>{c.name} ({c.symbol})</li>
+                    <li key={c.name}>
+                        {c.name} ({c.symbol})
+                    </li>
                 ))}
             </ul>
         </div>

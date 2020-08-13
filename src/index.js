@@ -9,8 +9,8 @@ import { register } from './serviceWorker';
 const rootElement = document.getElementById('root');
 
 ReactDOM.render(
-  <App />,
-  rootElement);
+    <App />,
+    rootElement);
 
 register();
 
