@@ -1,0 +1,15 @@
+.flag-icon {
+    padding: 0;
+}
+
+.flag-container {
+    margin: 1rem;
+    text-align: center;
+    width: 11%;
+    padding: 0;
+    transition: opacity, 0s;
+}
+
+.flag-icon:hover {
+    opacity: 0.5;
+}
